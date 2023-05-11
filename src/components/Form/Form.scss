@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.app {
+  width: 1200px;
+  max-height: 760px;
+  padding: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  vertical-align: center;
+}
+
+.change-status {
+  margin-left: 123px;
+  color: #0c77bb;
+}
+
+.form {
+  margin: 0 auto;
+  padding: 100px;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  h2 {
+    font-size: 30px;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  label {
+    font-size: 21px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000000;
+  }
+  input {
+    height: 29px;
+    width: 320px;
+  }
+  select {
+    width: 320px;
+  }
+  input[type="checkbox"] {
+    display: inline;
+    font-size: 16px;
+    width: 15px;
+    height: 15px;
+    margin-top: 0;
+    margin-right: 15px;
+  }
+
+  .checkbox {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .error {
+    font-size: 12px;
+    color: #ff0000;
+    margin-top: 8px;
+  }
+
+  .error-input {
+    border: 1px solid red;
+  }
+}
+.btn-change {
+  width: 120px;
+  height: 40px;
+  color: #fff;
+  background-color: #71c838;
+  opacity: 0.9;
+  border: 0;
+  cursor: pointer;
+}
+
+.btn-change:hover {
+  opacity: 1;
+}
+.btnsclose {
+  width: 503px;
+  padding: 14px 19px;
+  text-align: start;
+  margin-left: 224px;
+  pointer-events: none;
+  background-color: #f2f2f2;
+}
+
+.option-city {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #e5e4e4;
+  margin-bottom: 32px;
+  padding-bottom: 14px;
+  margin-top: 32px;
+}
+
+.header-item {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 32px;
+}
+
+.checkbox-style {
+  font-size: 16px;
+  color: #000000;
+  line-height: 19px;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+
+.col-35 {
+  float: left;
+  width: 22.5%;
+}
+
+.col-65 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #e5e4e4;
+  padding-bottom: 42px;
+  margin-bottom: 32px;
+}
+
+.checkbox-div {
+  display: flex;
+  flex-direction: row;
+}
+
+.password-warning {
+  color: red;
+  font-size: 14px;
+  border-color: red;
+}
+
+.email-warning {
+  color: red;
+  font-size: 14px;
+}
+
+.name-warning {
+  color: red;
+  font-size: 14px;
+}
+
+.errors-text {
+  font-size: 12px;
+  color: #999999;
+  margin-left: 10px;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.footer-bottom-text {
+  margin-left: 15px;
+  color: #999999;
+  font-size: 12px;
+}
+
+.mamaliga {
+  display: flex;
+}
