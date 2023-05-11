@@ -1,4 +1,11 @@
 const Input = ({ formik, title, type, errorsText, id }) => {
+  // якщо ти не пишеш нічого перед return
+  // ти можеш видалити return і просто мати () дужки
+  //
+  // приклад
+  // const oleg = () => { return (<div></div>) }
+  // const oleg = () => (<div></div>)
+  //
   return (
     <div className="header-item">
       <div className="col-35">

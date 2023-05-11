@@ -5,6 +5,10 @@ import Header from "../Header/Header";
 import Input from "../Input/Input";
 import { citiesArray } from "./cities";
 
+// Краще цю функцію винеси в інший файл який назви utils.js
+// і там ти можеш зробити
+// export validate = (values) => {...}
+// а в цьому файлі import { validate } from './utils'
 const validate = (values) => {
   const errors = {};
 
@@ -44,16 +48,21 @@ function Form() {
   const [selectedCity, setSelectedCity] = useState("");
   const [savedDates, setSavedDates] = useState([]);
 
+  // Використовуй ES6 стиль функцій
+  // це через стрілку
+  // const handleClick = () => {...}
   function handleClick() {
     const now = new Date();
     setSavedDates([...savedDates, now.toLocaleString()]);
   }
 
   const handleEditClick = () => {
+    // Якщо в тебе у функції щось таке просте то ти можеш замість handleEditClick написати внизу setEditing(true)
     setEditing(true);
   };
 
   const handleCityChange = (e) => {
+    // так само те що я написав вверху
     setSelectedCity(e.target.value);
   };
 
@@ -62,6 +71,7 @@ function Form() {
       <div className="container">
         <Header editing={editing} handleEditClick={handleEditClick} />
 
+        {/* Створи новий файл InputCities.js я винеси цю логіку туди */}
         <div className="option-city">
           <div className="col-35">
             {" "}
@@ -70,6 +80,8 @@ function Form() {
           <div className="col-65">
             <select value={selectedCity} onChange={handleCityChange}>
               <option value="">Ваш город</option>
+              {/* Краще вище створи нову змінну яка буде називатися citiesAfterSortAndFilter
+                   а тут будеш робити citiesAfterSortAndFilter.map(...)*/}
               {citiesArray
                 .filter((city) => city.population >= 50000)
                 .sort((a, b) => a.city.localeCompare(b.city, "ru-RU"))
@@ -103,6 +115,7 @@ function Form() {
           errorsText="Можно изменить адрес, указанный при регистрации."
         />
 
+        {/* Створи новий файл InputCheckbox.js я винеси цю логіку туди */}
         <div className="col-35">
           <label className="checkbox">Я согласен</label>
         </div>
